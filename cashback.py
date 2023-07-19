@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 from supabase import create_client, Client
 
-Client = create_client(url, key)
+Client = create_client(st.secrets["url"], st.secrets["key"])
 
 shop_name = st.text_input("Podaj nazwę sklepu", value = "")
 
